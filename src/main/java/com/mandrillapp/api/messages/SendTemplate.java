@@ -1,9 +1,12 @@
 package com.mandrillapp.api.messages;
 
+import java.util.List;
+
 import org.codehaus.jackson.annotate.JsonProperty;
 import org.codehaus.jackson.annotate.JsonPropertyOrder;
 
 import com.mandrillapp.api.messages.sendtemplate.Message;
+import com.mandrillapp.api.messages.sendtemplate.NameContent;
 
 @JsonPropertyOrder({
 		"key",
@@ -18,6 +21,8 @@ public class SendTemplate {
 	private String key;
 	@JsonProperty("template_name")
 	private String templateName;
+	@JsonProperty("template_content")
+	private List<NameContent> templateContent;
 	@JsonProperty("message")
 	private Message message;
 	@JsonProperty("async")
@@ -47,6 +52,16 @@ public class SendTemplate {
 	@JsonProperty("template_name")
 	public void setTemplateName(String templateName) {
 		this.templateName = templateName;
+	}
+
+	@JsonProperty("template_content")
+	public List<NameContent> getTemplateContent() {
+		return templateContent;
+	}
+
+	@JsonProperty("template_content")
+	public void setTemplateContent(List<NameContent> templateContent) {
+		this.templateContent = templateContent;
 	}
 
 	@JsonProperty("message")

@@ -7,14 +7,14 @@ import org.codehaus.jackson.annotate.JsonPropertyOrder;
 		"name",
 		"content"
 })
-public class Var {
+public class NameContent {
 
 	@JsonProperty("name")
 	private String name;
 	@JsonProperty("content")
 	private String content;
 
-	public Var(String name, String content) {
+	public NameContent(String name, String content) {
 		this.name = name;
 		this.content = content;
 	}

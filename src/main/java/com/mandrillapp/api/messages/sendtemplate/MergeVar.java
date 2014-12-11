@@ -15,9 +15,9 @@ public class MergeVar {
 	@JsonProperty("rcpt")
 	private String rcpt;
 	@JsonProperty("vars")
-	private List<Var> vars = new ArrayList<Var>();
+	private List<NameContent> vars = new ArrayList<NameContent>();
 
-	public MergeVar(String rcpt, List<Var> vars) {
+	public MergeVar(String rcpt, List<NameContent> vars) {
 		this.rcpt = rcpt;
 		this.vars = vars;
 	}
@@ -33,12 +33,12 @@ public class MergeVar {
 	}
 
 	@JsonProperty("vars")
-	public List<Var> getVars() {
+	public List<NameContent> getVars() {
 		return vars;
 	}
 
 	@JsonProperty("vars")
-	public void setVars(List<Var> vars) {
+	public void setVars(List<NameContent> vars) {
 		this.vars = vars;
 	}
 

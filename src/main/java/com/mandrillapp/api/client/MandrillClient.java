@@ -1,4 +1,4 @@
-package com.mandrillapp.client.messages;
+package com.mandrillapp.api.client;
 
 import java.util.HashMap;
 import java.util.Map;

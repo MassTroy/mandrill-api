@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.codehaus.jackson.annotate.JsonProperty;
 import org.codehaus.jackson.annotate.JsonPropertyOrder;
+import org.codehaus.jackson.map.annotate.JsonSerialize;
 
 @JsonPropertyOrder({
 		"to",
@@ -24,6 +25,7 @@ public class Message {
 	@JsonProperty("merge_vars")
 	private List<MergeVar> mergeVars = new ArrayList<MergeVar>();
 	@JsonProperty("attachments")
+	@JsonSerialize(include=JsonSerialize.Inclusion.NON_NULL)
 	private List<Attachment> attachments = new ArrayList<Attachment>();
 
 	public Message(List<To> to, List<MergeVar> mergeVars) {

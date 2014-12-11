@@ -1,8 +1,10 @@
 package com.mandrillapp.api.messages.sendtemplate;
 
+import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import org.codehaus.jackson.annotate.JsonProperty;
 import org.codehaus.jackson.annotate.JsonPropertyOrder;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 @JsonPropertyOrder({
 		"email",
 		"status",

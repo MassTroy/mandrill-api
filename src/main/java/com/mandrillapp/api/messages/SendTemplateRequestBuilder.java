@@ -1,4 +1,4 @@
-package com.mandrillapp.builder.messages;
+package com.mandrillapp.api.messages;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,12 +7,11 @@ import java.util.Map.Entry;
 
 import org.apache.commons.codec.binary.Base64;
 
-import com.mandrillapp.api.messages.SendTemplate;
 import com.mandrillapp.api.messages.sendtemplate.Attachment;
 import com.mandrillapp.api.messages.sendtemplate.MergeVar;
 import com.mandrillapp.api.messages.sendtemplate.Message;
 import com.mandrillapp.api.messages.sendtemplate.To;
-import com.mandrillapp.api.messages.sendtemplate.Var;
+import com.mandrillapp.api.messages.sendtemplate.NameContent;
 
 public class SendTemplateRequestBuilder {
 	
@@ -47,9 +46,9 @@ public class SendTemplateRequestBuilder {
 		
 		// add recipient params
 		if (params != null) {
-			List<Var> vars = new ArrayList<Var>();
+			List<NameContent> vars = new ArrayList<NameContent>();
 			for (Entry<String, String> param : params.entrySet()) {
-				Var var = new Var(param.getKey(), param.getValue());
+				NameContent var = new NameContent(param.getKey(), param.getValue());
 				vars.add(var);
 			}
 			MergeVar mergeVar = new MergeVar(email, vars);
