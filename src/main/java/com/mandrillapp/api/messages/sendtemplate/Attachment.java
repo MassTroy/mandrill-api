@@ -4,9 +4,9 @@ import org.codehaus.jackson.annotate.JsonProperty;
 import org.codehaus.jackson.annotate.JsonPropertyOrder;
 
 @JsonPropertyOrder({
-		"type",
-		"name",
-		"content"
+	"type",
+	"name",
+	"content"
 })
 public class Attachment {
 
@@ -17,7 +17,7 @@ public class Attachment {
 	@JsonProperty("content")
 	private String content;
 
-	public Attachment(String type, String name, String content) {
+	public Attachment(final String type, final String name, final String content) {
 		this.type = type;
 		this.name = name;
 		this.content = content;
@@ -29,7 +29,7 @@ public class Attachment {
 	}
 
 	@JsonProperty("type")
-	public void setType(String type) {
+	public void setType(final String type) {
 		this.type = type;
 	}
 
@@ -39,7 +39,7 @@ public class Attachment {
 	}
 
 	@JsonProperty("name")
-	public void setName(String name) {
+	public void setName(final String name) {
 		this.name = name;
 	}
 
@@ -49,7 +49,7 @@ public class Attachment {
 	}
 
 	@JsonProperty("content")
-	public void setContent(String content) {
+	public void setContent(final String content) {
 		this.content = content;
 	}
 

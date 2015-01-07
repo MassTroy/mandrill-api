@@ -8,11 +8,11 @@ import org.codehaus.jackson.annotate.JsonPropertyOrder;
 import org.codehaus.jackson.map.annotate.JsonSerialize;
 
 @JsonPropertyOrder({
-		"to",
-		"merge",
-		"merge_language",
-		"merge_vars",
-		"attachments"
+	"to",
+	"merge",
+	"merge_language",
+	"merge_vars",
+	"attachments"
 })
 public class Message {
 
@@ -25,15 +25,15 @@ public class Message {
 	@JsonProperty("merge_vars")
 	private List<MergeVar> mergeVars = new ArrayList<MergeVar>();
 	@JsonProperty("attachments")
-	@JsonSerialize(include=JsonSerialize.Inclusion.NON_NULL)
+	@JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
 	private List<Attachment> attachments = new ArrayList<Attachment>();
 
-	public Message(List<To> to, List<MergeVar> mergeVars) {
+	public Message(final List<To> to, final List<MergeVar> mergeVars) {
 		this.to = to;
 		this.mergeVars = mergeVars;
 	}
 
-	public Message(List<To> to, List<MergeVar> mergeVars, List<Attachment> attachments) {
+	public Message(final List<To> to, final List<MergeVar> mergeVars, final List<Attachment> attachments) {
 		this.to = to;
 		this.mergeVars = mergeVars;
 		this.attachments = attachments;
@@ -45,7 +45,7 @@ public class Message {
 	}
 
 	@JsonProperty("to")
-	public void setTo(List<To> to) {
+	public void setTo(final List<To> to) {
 		this.to = to;
 	}
 
@@ -55,7 +55,7 @@ public class Message {
 	}
 
 	@JsonProperty("merge")
-	public void setMerge(boolean merge) {
+	public void setMerge(final boolean merge) {
 		this.merge = merge;
 	}
 
@@ -65,7 +65,7 @@ public class Message {
 	}
 
 	@JsonProperty("merge_language")
-	public void setMergeLanguage(MergeLanguage mergeLanguage) {
+	public void setMergeLanguage(final MergeLanguage mergeLanguage) {
 		this.mergeLanguage = mergeLanguage;
 	}
 
@@ -75,7 +75,7 @@ public class Message {
 	}
 
 	@JsonProperty("merge_vars")
-	public void setMergeVars(List<MergeVar> mergeVars) {
+	public void setMergeVars(final List<MergeVar> mergeVars) {
 		this.mergeVars = mergeVars;
 	}
 
@@ -85,7 +85,7 @@ public class Message {
 	}
 
 	@JsonProperty("attachments")
-	public void setAttachments(List<Attachment> attachments) {
+	public void setAttachments(final List<Attachment> attachments) {
 		this.attachments = attachments;
 	}
 

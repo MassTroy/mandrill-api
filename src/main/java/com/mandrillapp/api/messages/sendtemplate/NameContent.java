@@ -4,8 +4,8 @@ import org.codehaus.jackson.annotate.JsonProperty;
 import org.codehaus.jackson.annotate.JsonPropertyOrder;
 
 @JsonPropertyOrder({
-		"name",
-		"content"
+	"name",
+	"content"
 })
 public class NameContent {
 
@@ -14,7 +14,7 @@ public class NameContent {
 	@JsonProperty("content")
 	private String content;
 
-	public NameContent(String name, String content) {
+	public NameContent(final String name, final String content) {
 		this.name = name;
 		this.content = content;
 	}
@@ -25,7 +25,7 @@ public class NameContent {
 	}
 
 	@JsonProperty("name")
-	public void setName(String name) {
+	public void setName(final String name) {
 		this.name = name;
 	}
 

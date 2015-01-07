@@ -6,9 +6,9 @@ import org.codehaus.jackson.annotate.JsonPropertyOrder;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonPropertyOrder({
-		"email",
-		"status",
-		"_id"
+	"email",
+	"status",
+	"_id"
 })
 public class SendTemplateResponse {
 
@@ -25,7 +25,7 @@ public class SendTemplateResponse {
 	}
 
 	@JsonProperty("email")
-	public void setEmail(String email) {
+	public void setEmail(final String email) {
 		this.email = email;
 	}
 
@@ -35,7 +35,7 @@ public class SendTemplateResponse {
 	}
 
 	@JsonProperty("status")
-	public void setStatus(String status) {
+	public void setStatus(final String status) {
 		this.status = status;
 	}
 
@@ -45,7 +45,7 @@ public class SendTemplateResponse {
 	}
 
 	@JsonProperty("_id")
-	public void setId(String Id) {
+	public void setId(final String Id) {
 		this.Id = Id;
 	}
 

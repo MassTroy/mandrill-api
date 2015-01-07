@@ -4,9 +4,9 @@ import org.codehaus.jackson.annotate.JsonProperty;
 import org.codehaus.jackson.annotate.JsonPropertyOrder;
 
 @JsonPropertyOrder({
-		"email",
-		"name",
-		"type"
+	"email",
+	"name",
+	"type"
 })
 public class To {
 
@@ -17,7 +17,7 @@ public class To {
 	@JsonProperty("type")
 	private ToType type = ToType.to;
 
-	public To(String email, String name) {
+	public To(final String email, final String name) {
 		this.email = email;
 		this.name = name;
 	}
@@ -28,7 +28,7 @@ public class To {
 	}
 
 	@JsonProperty("email")
-	public void setEmail(String email) {
+	public void setEmail(final String email) {
 		this.email = email;
 	}
 
@@ -38,7 +38,7 @@ public class To {
 	}
 
 	@JsonProperty("name")
-	public void setName(String name) {
+	public void setName(final String name) {
 		this.name = name;
 	}
 
@@ -48,7 +48,7 @@ public class To {
 	}
 
 	@JsonProperty("type")
-	public void setType(ToType type) {
+	public void setType(final ToType type) {
 		this.type = type;
 	}
 

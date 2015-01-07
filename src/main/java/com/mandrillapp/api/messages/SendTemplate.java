@@ -9,14 +9,14 @@ import com.mandrillapp.api.messages.sendtemplate.Message;
 import com.mandrillapp.api.messages.sendtemplate.NameContent;
 
 @JsonPropertyOrder({
-		"key",
-		"template_name",
-		"template_content",
-		"message",
-		"async"
+	"key",
+	"template_name",
+	"template_content",
+	"message",
+	"async"
 })
 public class SendTemplate {
-	
+
 	@JsonProperty("key")
 	private String key;
 	@JsonProperty("template_name")
@@ -28,7 +28,7 @@ public class SendTemplate {
 	@JsonProperty("async")
 	private boolean async = true;
 
-	public SendTemplate(String key, String templateName, Message message) {
+	public SendTemplate(final String key, final String templateName, final Message message) {
 		this.key = key;
 		this.templateName = templateName;
 		this.message = message;
@@ -40,7 +40,7 @@ public class SendTemplate {
 	}
 
 	@JsonProperty("key")
-	public void setKey(String key) {
+	public void setKey(final String key) {
 		this.key = key;
 	}
 
@@ -50,7 +50,7 @@ public class SendTemplate {
 	}
 
 	@JsonProperty("template_name")
-	public void setTemplateName(String templateName) {
+	public void setTemplateName(final String templateName) {
 		this.templateName = templateName;
 	}
 
@@ -60,7 +60,7 @@ public class SendTemplate {
 	}
 
 	@JsonProperty("template_content")
-	public void setTemplateContent(List<NameContent> templateContent) {
+	public void setTemplateContent(final List<NameContent> templateContent) {
 		this.templateContent = templateContent;
 	}
 
@@ -70,7 +70,7 @@ public class SendTemplate {
 	}
 
 	@JsonProperty("message")
-	public void setMessage(Message message) {
+	public void setMessage(final Message message) {
 		this.message = message;
 	}
 
@@ -80,7 +80,7 @@ public class SendTemplate {
 	}
 
 	@JsonProperty("async")
-	public void setAsync(boolean async) {
+	public void setAsync(final boolean async) {
 		this.async = async;
 	}
 

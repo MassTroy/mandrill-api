@@ -7,8 +7,8 @@ import org.codehaus.jackson.annotate.JsonProperty;
 import org.codehaus.jackson.annotate.JsonPropertyOrder;
 
 @JsonPropertyOrder({
-		"rcpt",
-		"vars"
+	"rcpt",
+	"vars"
 })
 public class MergeVar {
 
@@ -17,7 +17,7 @@ public class MergeVar {
 	@JsonProperty("vars")
 	private List<NameContent> vars = new ArrayList<NameContent>();
 
-	public MergeVar(String rcpt, List<NameContent> vars) {
+	public MergeVar(final String rcpt, final List<NameContent> vars) {
 		this.rcpt = rcpt;
 		this.vars = vars;
 	}
@@ -28,7 +28,7 @@ public class MergeVar {
 	}
 
 	@JsonProperty("rcpt")
-	public void setRcpt(String rcpt) {
+	public void setRcpt(final String rcpt) {
 		this.rcpt = rcpt;
 	}
 
@@ -38,7 +38,7 @@ public class MergeVar {
 	}
 
 	@JsonProperty("vars")
-	public void setVars(List<NameContent> vars) {
+	public void setVars(final List<NameContent> vars) {
 		this.vars = vars;
 	}
 
