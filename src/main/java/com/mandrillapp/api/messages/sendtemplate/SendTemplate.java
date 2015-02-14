@@ -1,19 +1,19 @@
-package com.mandrillapp.api.messages;
+package com.mandrillapp.api.messages.sendtemplate;
 
 import java.util.List;
 
 import org.codehaus.jackson.annotate.JsonProperty;
 import org.codehaus.jackson.annotate.JsonPropertyOrder;
 
-import com.mandrillapp.api.messages.sendtemplate.Message;
-import com.mandrillapp.api.messages.sendtemplate.NameContent;
+import com.mandrillapp.api.messages.common.Message;
+import com.mandrillapp.api.messages.common.NameContent;
 
 @JsonPropertyOrder({
-	"key",
-	"template_name",
-	"template_content",
-	"message",
-	"async"
+		"key",
+		"template_name",
+		"template_content",
+		"message",
+		"async"
 })
 public class SendTemplate {
 
@@ -28,58 +28,47 @@ public class SendTemplate {
 	@JsonProperty("async")
 	private boolean async = true;
 
-	public SendTemplate(final String key, final String templateName, final Message message) {
-		this.key = key;
+	public SendTemplate(final String templateName, final Message message) {
 		this.templateName = templateName;
 		this.message = message;
 	}
 
-	@JsonProperty("key")
 	public String getKey() {
 		return key;
 	}
 
-	@JsonProperty("key")
 	public void setKey(final String key) {
 		this.key = key;
 	}
 
-	@JsonProperty("template_name")
 	public String getTemplateName() {
 		return templateName;
 	}
 
-	@JsonProperty("template_name")
 	public void setTemplateName(final String templateName) {
 		this.templateName = templateName;
 	}
 
-	@JsonProperty("template_content")
 	public List<NameContent> getTemplateContent() {
 		return templateContent;
 	}
 
-	@JsonProperty("template_content")
 	public void setTemplateContent(final List<NameContent> templateContent) {
 		this.templateContent = templateContent;
 	}
 
-	@JsonProperty("message")
 	public Message getMessage() {
 		return message;
 	}
 
-	@JsonProperty("message")
 	public void setMessage(final Message message) {
 		this.message = message;
 	}
 
-	@JsonProperty("async")
 	public boolean isAsync() {
 		return async;
 	}
 
-	@JsonProperty("async")
 	public void setAsync(final boolean async) {
 		this.async = async;
 	}

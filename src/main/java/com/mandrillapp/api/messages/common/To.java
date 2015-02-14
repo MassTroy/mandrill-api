@@ -1,12 +1,12 @@
-package com.mandrillapp.api.messages.sendtemplate;
+package com.mandrillapp.api.messages.common;
 
 import org.codehaus.jackson.annotate.JsonProperty;
 import org.codehaus.jackson.annotate.JsonPropertyOrder;
 
 @JsonPropertyOrder({
-	"email",
-	"name",
-	"type"
+		"email",
+		"name",
+		"type"
 })
 public class To {
 
@@ -22,32 +22,26 @@ public class To {
 		this.name = name;
 	}
 
-	@JsonProperty("email")
 	public String getEmail() {
 		return email;
 	}
 
-	@JsonProperty("email")
 	public void setEmail(final String email) {
 		this.email = email;
 	}
 
-	@JsonProperty("name")
 	public String getName() {
 		return name;
 	}
 
-	@JsonProperty("name")
 	public void setName(final String name) {
 		this.name = name;
 	}
 
-	@JsonProperty("type")
 	public ToType getType() {
 		return type;
 	}
 
-	@JsonProperty("type")
 	public void setType(final ToType type) {
 		this.type = type;
 	}

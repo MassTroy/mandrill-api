@@ -1,4 +1,4 @@
-package com.mandrillapp.api.messages.sendtemplate;
+package com.mandrillapp.api.messages.common;
 
 import org.codehaus.jackson.annotate.JsonProperty;
 import org.codehaus.jackson.annotate.JsonPropertyOrder;
@@ -19,19 +19,20 @@ public class NameContent {
 		this.content = content;
 	}
 
-	@JsonProperty("name")
 	public String getName() {
 		return name;
 	}
 
-	@JsonProperty("name")
 	public void setName(final String name) {
 		this.name = name;
 	}
 
-	@JsonProperty("content")
 	public String getContent() {
 		return content;
+	}
+
+	public void setContent(final String content) {
+		this.content = content;
 	}
 
 }

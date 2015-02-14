@@ -1,4 +1,4 @@
-package com.mandrillapp.api.messages.sendtemplate;
+package com.mandrillapp.api.messages.common;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,8 +7,8 @@ import org.codehaus.jackson.annotate.JsonProperty;
 import org.codehaus.jackson.annotate.JsonPropertyOrder;
 
 @JsonPropertyOrder({
-	"rcpt",
-	"vars"
+		"rcpt",
+		"vars"
 })
 public class MergeVar {
 
@@ -22,22 +22,18 @@ public class MergeVar {
 		this.vars = vars;
 	}
 
-	@JsonProperty("rcpt")
 	public String getRcpt() {
 		return rcpt;
 	}
 
-	@JsonProperty("rcpt")
 	public void setRcpt(final String rcpt) {
 		this.rcpt = rcpt;
 	}
 
-	@JsonProperty("vars")
 	public List<NameContent> getVars() {
 		return vars;
 	}
 
-	@JsonProperty("vars")
 	public void setVars(final List<NameContent> vars) {
 		this.vars = vars;
 	}
